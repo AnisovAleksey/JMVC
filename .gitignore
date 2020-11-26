@@ -71,3 +71,6 @@ Source/ThemoviedbOne/fastlane/test_derived_data/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/swift,xcode,carthage,cocoapods,objective-c
+
+## Carthage Frameworks
+Carthage/

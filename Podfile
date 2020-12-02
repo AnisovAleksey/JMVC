@@ -1,6 +1,6 @@
 platform :ios, '13.0'
 
-flutter_application_path = File.expand_path("../flutter_game", File.dirname(path))
+flutter_application_path = File.expand_path("./Modules/flutter_game", File.dirname(path))
 load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
 
 target 'ThemoviedbOne' do

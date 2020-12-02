@@ -12,9 +12,9 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
-  - Flutter (from `../flutter_game/.ios/Flutter/engine`)
-  - flutter_game (from `../flutter_game/.ios/Flutter`)
-  - FlutterPluginRegistrant (from `../flutter_game/.ios/Flutter/FlutterPluginRegistrant`)
+  - Flutter (from `Modules/flutter_game/.ios/Flutter/engine`)
+  - flutter_game (from `Modules/flutter_game/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `Modules/flutter_game/.ios/Flutter/FlutterPluginRegistrant`)
   - SnapKit
 
 SPEC REPOS:
@@ -25,11 +25,11 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: "../flutter_game/.ios/Flutter/engine"
+    :path: Modules/flutter_game/.ios/Flutter/engine
   flutter_game:
-    :path: "../flutter_game/.ios/Flutter"
+    :path: Modules/flutter_game/.ios/Flutter
   FlutterPluginRegistrant:
-    :path: "../flutter_game/.ios/Flutter/FlutterPluginRegistrant"
+    :path: Modules/flutter_game/.ios/Flutter/FlutterPluginRegistrant
 
 SPEC CHECKSUMS:
   Alamofire: 3b6a534a3df22db367e4dedeeca73d1ddfcf0e2f
@@ -39,6 +39,6 @@ SPEC CHECKSUMS:
   FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 1df4bddc757508873f6d042115ed85aecd2d2093
+PODFILE CHECKSUM: f5afee6116764bd70969e91cc081fffcaf5c06c5
 
 COCOAPODS: 1.9.2

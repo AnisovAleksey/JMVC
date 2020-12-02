@@ -1193,15 +1193,15 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Users/alekseyanisov/Documents/work/tmp/flutter_game/.metadata",
-				"${SRCROOT}/../flutter_game/.ios/Flutter/App.framework/App",
-				"${SRCROOT}/../flutter_game/.ios/Flutter/engine/Flutter.framework/Flutter",
-				"${SRCROOT}/../flutter_game/.ios/Flutter/flutter_export_environment.sh",
+				"${SRCROOT}/Users/alekseyanisov/Documents/work/tmp/JMVC/Modules/flutter_game/.metadata",
+				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/flutter_export_environment.sh",
 			);
 			name = "[CP-User] Run Flutter Build flutter_game Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_game/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/Modules/flutter_game/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		D051A4522ED40117BFB6F9CA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -76,6 +76,7 @@ final class MovieScreenViewImpl: UIView, MovieScreenView {
     private func setupScrollView() {
         addSubview(scrollView)
         
+        scrollView.alwaysBounceVertical = true
         scrollView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.bottom.equalTo(safeAreaLayoutGuide)

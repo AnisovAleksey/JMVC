@@ -34,12 +34,14 @@ class LoginScreenTests: XCTestCase {
     func testLoginNotInternet() throws {
         app.launchEnvironment = [TestConfiguration.Key.startFlow.rawValue: StartFlow.loginNotInternet.rawValue]
         app.launch()
-        
-        (app.textFields["loginInput"] as! UITextField).text = "TestTest"
-        (app.textFields["loginInput"] as! UITextField).sendActions(for: .editingChanged)
-        (app.textFields["passwordInput"] as! UITextField).text = "TestTest"
-        (app.textFields["passwordInput"] as! UITextField).sendActions(for: .editingChanged)
 
+        app.textFields["loginInput"].tap()
+        app.textFields["loginInput"].clearText()
+        app.textFields["loginInput"].typeText("TestTest")
+        
+        app.secureTextFields["passwordInput"].tap()
+        app.secureTextFields["passwordInput"].clearText()
+        app.secureTextFields["passwordInput"].typeText("TestTest")
         
         snapshot("LoginScreen_notInternet_02")
         app.buttons["authButton"].tap()

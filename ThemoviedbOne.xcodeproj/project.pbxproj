@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4907FCDA2577ECC300D0D9B2 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907FCD92577ECC300D0D9B2 /* XCUIElement.swift */; };
 		DC005644247E939A00D1C318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC005643247E939A00D1C318 /* AppDelegate.swift */; };
 		DC00564D247E939B00D1C318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC00564C247E939B00D1C318 /* Assets.xcassets */; };
 		DC005650247E939B00D1C318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC00564E247E939B00D1C318 /* LaunchScreen.storyboard */; };
@@ -156,6 +157,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4907FCD92577ECC300D0D9B2 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		DC005640247E939A00D1C318 /* ThemoviedbOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThemoviedbOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC005643247E939A00D1C318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC00564C247E939B00D1C318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,6 +304,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4907FCD82577ECAF00D0D9B2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				4907FCD92577ECC300D0D9B2 /* XCUIElement.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		DC005637247E939A00D1C318 = {
 			isa = PBXGroup;
 			children = (
@@ -895,6 +905,7 @@
 		DCC4E4C724F393EE00C82798 /* ThemoviedbOneScreenshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				4907FCD82577ECAF00D0D9B2 /* Library */,
 				DCC4E4E924F3981E00C82798 /* Frameworks */,
 				DCC4E4D424F3947E00C82798 /* ScreenshotTests */,
 				DCC4E4D324F3946F00C82798 /* SupportingFiles */,
@@ -1219,6 +1230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4907FCDA2577ECC300D0D9B2 /* XCUIElement.swift in Sources */,
 				DCC4E4D924F3950000C82798 /* StartFlow.swift in Sources */,
 				DCC4E4DA24F3950000C82798 /* TestConfiguration.swift in Sources */,
 				DCC4E4DB24F3955100C82798 /* ProcessInfoEnvironmentProvider.swift in Sources */,

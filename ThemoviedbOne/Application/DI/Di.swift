@@ -129,7 +129,7 @@ final class CoordinatorFactoryImpl: CoordinatorFactory {
     }
     
     func makeMovieCoordinator(router: Router) -> MoviesCoordinator {
-        return MoviesCoordinator(router: router, screenFactory: screenFactory)
+        return MoviesCoordinator(router: router, screenFactory: screenFactory, gameRouter: GameRouter(router: router, gameViewControllerFactory: FlutterWorker(router: router)))
     }
     
     func makeStartCoordinator(router: Router) -> StartCoordinator {

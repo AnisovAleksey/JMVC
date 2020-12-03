@@ -4,9 +4,11 @@ import Combine
 final class MoviesScreenVC<View: MoviesScreenView>: BaseViewController<View> {
     typealias OnSelectMovie = (Movie.Id) -> Void
     typealias OnShowFavorite = (UIAlertControllerCommonInputData) -> Void
+    typealias OnShowGame = () -> Void
     
     var onSelectMovie: OnSelectMovie?
     var onShowFavoriteAlert: OnShowFavorite?
+    var onShowGame: OnShowGame?
     
     private let moviesPagerProvider: MoviesPagerProvider
     private var cancalables = Set<AnyCancellable>()
@@ -31,6 +33,8 @@ final class MoviesScreenVC<View: MoviesScreenView>: BaseViewController<View> {
             .store(in: &cancalables)
         moviesPagerProvider.nextPage()
         rootView.events.sink { [weak self] in self?.onViewEnvent($0) }.store(in: &cancalables)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Game", style: .plain, target: self, action: #selector(onGameButtonTap))
     }
     
     private func onViewEnvent(_ event: MoviesScreenViewEvent) {
@@ -88,6 +92,11 @@ final class MoviesScreenVC<View: MoviesScreenView>: BaseViewController<View> {
         onShowFavoriteAlert?(data)
     }
     
+    
+    @objc
+    private func onGameButtonTap() {
+        onShowGame?()
+    }
 }
 
 /*

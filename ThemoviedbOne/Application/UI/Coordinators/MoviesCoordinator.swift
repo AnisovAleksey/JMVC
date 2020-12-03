@@ -6,10 +6,12 @@ final class MoviesCoordinator: BaseCoordinator {
     
     private let screenFactory: ScreenFactory
     private let router: Router
+    private let gameRouter: GameRouterPublic
     
-    init(router: Router, screenFactory: ScreenFactory) {
+    init(router: Router, screenFactory: ScreenFactory, gameRouter: GameRouterPublic) {
         self.screenFactory = screenFactory
         self.router = router
+        self.gameRouter = gameRouter
     }
     
     override func start() {
@@ -22,6 +24,9 @@ final class MoviesCoordinator: BaseCoordinator {
         moviesScreen.onShowFavoriteAlert = { [weak router] data in
             let alert = UIAlertController(inputData: data)
             router?.present(alert)
+        }
+        moviesScreen.onShowGame = { [weak gameRouter] in
+            gameRouter?.openGame()
         }
         router.setRootModule(moviesScreen, hideBar: false)
     }

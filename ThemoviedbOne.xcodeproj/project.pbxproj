@@ -11,6 +11,8 @@
 		2706499AB43E5A5DAFD0BFF1 /* Pods_ThemoviedbOneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF98091B8E4853EAB2B4B90D /* Pods_ThemoviedbOneTests.framework */; };
 		4907FCDA2577ECC300D0D9B2 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907FCD92577ECC300D0D9B2 /* XCUIElement.swift */; };
 		4907FD0C25781AAE00D0D9B2 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907FD0B25781AAE00D0D9B2 /* GameRouter.swift */; };
+		4907FD28257822F600D0D9B2 /* Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4907FD27257822F500D0D9B2 /* Info-debug.plist */; };
+		493E177F2578CDBF008BCF5F /* FlutterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493E177E2578CDBF008BCF5F /* FlutterWorker.swift */; };
 		6B8D69133904375C9DA6A1DA /* Pods_ThemoviedbOne_ThemoviedbOneScreenshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BEAC96DB6CF6EF3AEA977A /* Pods_ThemoviedbOne_ThemoviedbOneScreenshotTests.framework */; };
 		DC005644247E939A00D1C318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC005643247E939A00D1C318 /* AppDelegate.swift */; };
 		DC00564D247E939B00D1C318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC00564C247E939B00D1C318 /* Assets.xcassets */; };
@@ -163,6 +165,8 @@
 		36BEAC96DB6CF6EF3AEA977A /* Pods_ThemoviedbOne_ThemoviedbOneScreenshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThemoviedbOne_ThemoviedbOneScreenshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4907FCD92577ECC300D0D9B2 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		4907FD0B25781AAE00D0D9B2 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		4907FD27257822F500D0D9B2 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
+		493E177E2578CDBF008BCF5F /* FlutterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterWorker.swift; sourceTree = "<group>"; };
 		59D724259EA7D0F2B7FDC9D5 /* Pods_ThemoviedbOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThemoviedbOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE8CA9B51F45C924EB518CF /* Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests.debug.xcconfig"; path = "Target Support Files/Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests/Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0F2C1EE58C332F0AE3506C /* Pods-ThemoviedbOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemoviedbOne.release.xcconfig"; path = "Target Support Files/Pods-ThemoviedbOne/Pods-ThemoviedbOne.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +176,7 @@
 		DC005643247E939A00D1C318 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC00564C247E939B00D1C318 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC00564F247E939B00D1C318 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DC005651247E939B00D1C318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC005651247E939B00D1C318 /* Info-release.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-release.plist"; sourceTree = "<group>"; };
 		DC005656247E939B00D1C318 /* ThemoviedbOneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThemoviedbOneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC00565A247E939B00D1C318 /* ThemoviedbOneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemoviedbOneTests.swift; sourceTree = "<group>"; };
 		DC00565C247E939B00D1C318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -331,6 +335,14 @@
 			path = Routers;
 			sourceTree = "<group>";
 		};
+		493E177D2578CDA9008BCF5F /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				493E177E2578CDBF008BCF5F /* FlutterWorker.swift */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
 		964155A59DA5B4EDAF705CE2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,7 +453,8 @@
 		DC00566A247E951400D1C318 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				DC005651247E939B00D1C318 /* Info.plist */,
+				DC005651247E939B00D1C318 /* Info-release.plist */,
+				4907FD27257822F500D0D9B2 /* Info-debug.plist */,
 				DCA1BB2F247FC60D000CED5E /* Configuration.swift */,
 				DCA1BB31247FC689000CED5E /* ProductionConfiguration.swift */,
 			);
@@ -451,6 +464,7 @@
 		DC00566B247E956B00D1C318 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				493E177D2578CDA9008BCF5F /* Flutter */,
 				DC1325C5248008CB002929D6 /* Coordinator */,
 				DC005688247EBD5600D1C318 /* Foundation */,
 				DC00566D247E965800D1C318 /* UIKIt */,
@@ -1102,6 +1116,7 @@
 				DC1325BF247FED51002929D6 /* SearchMovieMock.json in Resources */,
 				DC1325B5247FECB1002929D6 /* MakeTokenMock.json in Resources */,
 				DC005685247EB68500D1C318 /* ZeroView.xib in Resources */,
+				4907FD28257822F600D0D9B2 /* Info-debug.plist in Resources */,
 				DCBBC45C24F6BC6C002580CE /* Ubuntu-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1313,6 +1328,7 @@
 				DCA1BB30247FC60D000CED5E /* Configuration.swift in Sources */,
 				DC00566F247E966300D1C318 /* loadFromNib.swift in Sources */,
 				DC1325A9247FE10B002929D6 /* RequestBuilderImpl.swift in Sources */,
+				493E177F2578CDBF008BCF5F /* FlutterWorker.swift in Sources */,
 				DCC4E4C124F38F2300C82798 /* ApplicationCoordinatorScreenshotMock.swift in Sources */,
 				DCA6194D249B3358001D8B83 /* BaseJsonDecoder.swift in Sources */,
 				DCBE544B2482ACEF0028337B /* UIView+addSubviewWithSameSize.swift in Sources */,
@@ -1531,7 +1547,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ThemoviedbOne/Configuration/Info.plist;
+				INFOPLIST_FILE = "ThemoviedbOne/Configuration/Info-debug.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1554,7 +1570,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ThemoviedbOne/Configuration/Info.plist;
+				INFOPLIST_FILE = "ThemoviedbOne/Configuration/Info-release.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

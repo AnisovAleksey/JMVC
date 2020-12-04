@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_chess_board/flutter_chess_board.dart';
 import 'package:flutter_game/custom_channels.dart';
+import 'package:flutter_game/video_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -64,10 +65,17 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: LayoutBuilder(builder: _buildChessBoard)),
+      body: Column(
+        children: [
+          SizedBox(
+            child: VideoView(),
+            height: 142,
+            width: 100,
+          ),
+          LayoutBuilder(builder: _buildChessBoard),
+          RawMaterialButton(onPressed: () => _startCam())
+        ],
+      ),
     );
   }
 
@@ -81,4 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
       size: min(constraints.maxWidth, constraints.maxHeight),
     );
   }
+
+  _startCam() {}
 }

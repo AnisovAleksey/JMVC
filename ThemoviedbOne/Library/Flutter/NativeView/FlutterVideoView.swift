@@ -10,31 +10,25 @@ import UIKit
 import Flutter
 import AVFoundation
 
-class FlutterVideoViewFactory: NSObject, FlutterPlatformViewFactory {
-    private var messenger: FlutterBinaryMessenger
-
-    init(messenger: FlutterBinaryMessenger) {
-        self.messenger = messenger
-        super.init()
+class FlutterMyVideoViewFactory: NSObject, FlutterPlatformViewFactory {
+    
+    public func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
+        return FlutterStandardMessageCodec.sharedInstance()
     }
 
-    func create(
-        withFrame frame: CGRect,
-        viewIdentifier viewId: Int64,
-        arguments args: Any?
-    ) -> FlutterPlatformView {
-        return FlutterVideoView(
+    func create(withFrame frame: CGRect,
+                viewIdentifier viewId: Int64,
+                arguments args: Any?) -> FlutterPlatformView {
+        return FlutterMyVideoView(
             frame: frame,
             viewIdentifier: viewId,
-            arguments: args,
-            binaryMessenger: messenger)
+            arguments: args)
     }
 }
 
-final class FlutterVideoView: NSObject {
+final class FlutterMyVideoView: NSObject {
     private let videoView = UIView()
     
-    private let channel: FlutterMethodChannel
     private var frameSubscription: NSKeyValueObservation?
     
     private lazy var captureSession: AVCaptureSession = {
@@ -43,24 +37,16 @@ final class FlutterVideoView: NSObject {
         return captureSession
     }()
 
-    init(
-        frame: CGRect,
-        viewIdentifier viewId: Int64,
-        arguments args: Any?,
-        binaryMessenger messenger: FlutterBinaryMessenger
-    ) {
-        self.channel = FlutterMethodChannel(name: "flutterView",
-                                            binaryMessenger: messenger,
-                                            codec: FlutterStandardMethodCodec(readerWriter: FlutterStandardReaderWriter()))
+    init(frame: CGRect,
+         viewIdentifier viewId: Int64,
+         arguments args: Any?) {
         super.init()
-        print(frame)
         videoView.frame = frame
         
         self.frameSubscription = videoView.observe(\.frame) {[weak self] (view, observedValue) in
             guard let self = self else {
                 return
             }
-            print(self.videoView.frame)
             
             self.videoView.layer.sublayers?.forEach {
                 $0.frame = self.videoView.bounds
@@ -87,9 +73,6 @@ final class FlutterVideoView: NSObject {
                 videoView.layer.addSublayer(videoPreviewLayer)
                 videoPreviewLayer.frame = videoView.bounds
                 captureSession.startRunning()
-                print("input added")
-            } else {
-                print("cant add input")
             }
         }
         catch let error  {
@@ -98,7 +81,7 @@ final class FlutterVideoView: NSObject {
     }
 }
 
-extension FlutterVideoView: FlutterPlatformView {
+extension FlutterMyVideoView: FlutterPlatformView {
     func view() -> UIView {
         return videoView
     }

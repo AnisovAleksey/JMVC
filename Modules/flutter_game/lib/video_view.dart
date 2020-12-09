@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 
-const String _iosViewType = "FlutterVideoView";
-const String _androidViewType = "FlutterVideoView";
+const String _iosViewType = "FlutterMyVideoView";
+const String _androidViewType = "FlutterMyVideoView";
 
-class VideoView extends StatelessWidget {
+class MyVideoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Map<String, dynamic> creationParams = <String, dynamic>{};

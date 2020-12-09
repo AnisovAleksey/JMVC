@@ -1011,7 +1011,7 @@
 			buildConfigurationList = DC00565F247E939B00D1C318 /* Build configuration list for PBXNativeTarget "ThemoviedbOne" */;
 			buildPhases = (
 				F3D11D8D69BFB459DB7A19AB /* [CP] Check Pods Manifest.lock */,
-				B3B8D8DC95DF7F9776DCFDFB /* [CP-User] Run Flutter Build flutter_game Script */,
+				78445DD8E85FE7108A554649 /* [CP-User] Run Flutter Build flutter_game Script */,
 				DC00563C247E939A00D1C318 /* Sources */,
 				DC00563D247E939A00D1C318 /* Frameworks */,
 				DC00563E247E939A00D1C318 /* Resources */,
@@ -1196,6 +1196,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		78445DD8E85FE7108A554649 /* [CP-User] Run Flutter Build flutter_game Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Users/alekseyanisov/Documents/crew/JMVC/Modules/flutter_game/.metadata",
+				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/App.framework/App",
+				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/engine/Flutter.framework/Flutter",
+				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/flutter_export_environment.sh",
+			);
+			name = "[CP-User] Run Flutter Build flutter_game Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/Modules/flutter_game/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 		8B6506BDD7241A0286462770 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1212,22 +1228,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests/Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		B3B8D8DC95DF7F9776DCFDFB /* [CP-User] Run Flutter Build flutter_game Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Users/alekseyanisov/Documents/work/tmp/JMVC/Modules/flutter_game/.metadata",
-				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/App.framework/App",
-				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/engine/Flutter.framework/Flutter",
-				"${SRCROOT}/Modules/flutter_game/.ios/Flutter/flutter_export_environment.sh",
-			);
-			name = "[CP-User] Run Flutter Build flutter_game Script";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/Modules/flutter_game/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
 		};
 		D051A4522ED40117BFB6F9CA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

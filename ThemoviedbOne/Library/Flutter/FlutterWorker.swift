@@ -48,9 +48,9 @@ final class FlutterWorker {
         
         GeneratedPluginRegistrant.register(with: flutterEngine)
         
-        let registrar = flutterEngine.registrar(forPlugin: "platformVideoView")
-        let factory = FlutterVideoViewFactory(messenger: registrar!.messenger())
-        registrar?.register(factory, withId: "FlutterVideoView")
+        flutterEngine
+            .registrar(forPlugin: "platformVideoView")?
+            .register(FlutterMyVideoViewFactory(), withId: "FlutterMyVideoView")
     }
 }
 

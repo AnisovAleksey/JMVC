@@ -13,7 +13,8 @@
 		4907FD0C25781AAE00D0D9B2 /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907FD0B25781AAE00D0D9B2 /* GameRouter.swift */; };
 		4907FD28257822F600D0D9B2 /* Info-debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4907FD27257822F500D0D9B2 /* Info-debug.plist */; };
 		493E177F2578CDBF008BCF5F /* FlutterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493E177E2578CDBF008BCF5F /* FlutterWorker.swift */; };
-		493E17842579F395008BCF5F /* FlutterVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493E17832579F395008BCF5F /* FlutterVideoView.swift */; };
+		493E17842579F395008BCF5F /* FlutterMyVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493E17832579F395008BCF5F /* FlutterMyVideoView.swift */; };
+		49945DB6258110FB0027165D /* FlutterYoutubeVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B8C237257CAD6100407950 /* FlutterYoutubeVideoView.swift */; };
 		6B8D69133904375C9DA6A1DA /* Pods_ThemoviedbOne_ThemoviedbOneScreenshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BEAC96DB6CF6EF3AEA977A /* Pods_ThemoviedbOne_ThemoviedbOneScreenshotTests.framework */; };
 		DC005644247E939A00D1C318 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC005643247E939A00D1C318 /* AppDelegate.swift */; };
 		DC00564D247E939B00D1C318 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC00564C247E939B00D1C318 /* Assets.xcassets */; };
@@ -168,7 +169,8 @@
 		4907FD0B25781AAE00D0D9B2 /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 		4907FD27257822F500D0D9B2 /* Info-debug.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-debug.plist"; sourceTree = "<group>"; };
 		493E177E2578CDBF008BCF5F /* FlutterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterWorker.swift; sourceTree = "<group>"; };
-		493E17832579F395008BCF5F /* FlutterVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterVideoView.swift; sourceTree = "<group>"; };
+		493E17832579F395008BCF5F /* FlutterMyVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterMyVideoView.swift; sourceTree = "<group>"; };
+		49B8C237257CAD6100407950 /* FlutterYoutubeVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterYoutubeVideoView.swift; sourceTree = "<group>"; };
 		59D724259EA7D0F2B7FDC9D5 /* Pods_ThemoviedbOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThemoviedbOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE8CA9B51F45C924EB518CF /* Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests.debug.xcconfig"; path = "Target Support Files/Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests/Pods-ThemoviedbOne-ThemoviedbOneScreenshotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0F2C1EE58C332F0AE3506C /* Pods-ThemoviedbOne.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThemoviedbOne.release.xcconfig"; path = "Target Support Files/Pods-ThemoviedbOne/Pods-ThemoviedbOne.release.xcconfig"; sourceTree = "<group>"; };
@@ -349,7 +351,8 @@
 		493E17822579F354008BCF5F /* NativeView */ = {
 			isa = PBXGroup;
 			children = (
-				493E17832579F395008BCF5F /* FlutterVideoView.swift */,
+				493E17832579F395008BCF5F /* FlutterMyVideoView.swift */,
+				49B8C237257CAD6100407950 /* FlutterYoutubeVideoView.swift */,
 			);
 			path = NativeView;
 			sourceTree = "<group>";
@@ -1301,6 +1304,7 @@
 				DCA618C024969318001D8B83 /* StartCoordinator.swift in Sources */,
 				DC1325CD24800CAC002929D6 /* LoginCoordinator.swift in Sources */,
 				DCBBC46624F6CBFE002580CE /* Colors+App.swift in Sources */,
+				49945DB6258110FB0027165D /* FlutterYoutubeVideoView.swift in Sources */,
 				4907FD0C25781AAE00D0D9B2 /* GameRouter.swift in Sources */,
 				DCC4E4B324F3856D00C82798 /* StartFlow.swift in Sources */,
 				DC8F937C248260FE009F03E4 /* MovieScreenVC.swift in Sources */,
@@ -1326,7 +1330,7 @@
 				DC8F937A248258DD009F03E4 /* PreviewContainer.swift in Sources */,
 				DC7732302480EFFC006AAEF7 /* MoviesCoordinator.swift in Sources */,
 				DCA1BAE5247FBAF6000CED5E /* MovieViewCell.swift in Sources */,
-				493E17842579F395008BCF5F /* FlutterVideoView.swift in Sources */,
+				493E17842579F395008BCF5F /* FlutterMyVideoView.swift in Sources */,
 				DC1325CB24800B26002929D6 /* ApplicationCoordinator.swift in Sources */,
 				DCA618B824968C44001D8B83 /* KeychainItemAccessibility.swift in Sources */,
 				DCA0332824A8861B00E1993D /* UIAlertController+InitFromCommonInputData.swift in Sources */,

@@ -10,8 +10,7 @@ import UIKit
 import Flutter
 import AVFoundation
 
-class FlutterMyVideoViewFactory: NSObject, FlutterPlatformViewFactory {
-    
+final class FlutterMyVideoViewFactory: NSObject, FlutterPlatformViewFactory {
     public func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
         return FlutterStandardMessageCodec.sharedInstance()
     }
@@ -19,10 +18,9 @@ class FlutterMyVideoViewFactory: NSObject, FlutterPlatformViewFactory {
     func create(withFrame frame: CGRect,
                 viewIdentifier viewId: Int64,
                 arguments args: Any?) -> FlutterPlatformView {
-        return FlutterMyVideoView(
-            frame: frame,
-            viewIdentifier: viewId,
-            arguments: args)
+        return FlutterMyVideoView(frame: frame,
+                                  viewIdentifier: viewId,
+                                  arguments: args)
     }
 }
 
@@ -57,13 +55,12 @@ final class FlutterMyVideoView: NSObject {
     }
     
     private func setupVideoLayer() {
-        guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
-            else {
-                print("Unable to access back camera!")
-                return
+        guard let frontCamera = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: .video, position: .front).devices.first else {
+            print("Unable to access front camera!")
+            return
         }
         do {
-            let input = try AVCaptureDeviceInput(device: backCamera)
+            let input = try AVCaptureDeviceInput(device: frontCamera)
             if captureSession.canAddInput(input) {
                 captureSession.addInput(input)
                 let videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)

@@ -8,6 +8,7 @@ PODS:
   - FlutterPluginRegistrant (0.0.1):
     - Flutter
   - SnapKit (5.0.1)
+  - XCDYouTubeKit (2.15.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -16,12 +17,14 @@ DEPENDENCIES:
   - flutter_game (from `Modules/flutter_game/.ios/Flutter`)
   - FlutterPluginRegistrant (from `Modules/flutter_game/.ios/Flutter/FlutterPluginRegistrant`)
   - SnapKit
+  - XCDYouTubeKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
     - SnapKit
+    - XCDYouTubeKit
 
 EXTERNAL SOURCES:
   Flutter:
@@ -38,7 +41,8 @@ SPEC CHECKSUMS:
   flutter_game: 10adb02837cf87dfe53372536477fd5af313f39f
   FlutterPluginRegistrant: 2afd5ea46d3a949472c9b7da6462d8fbf7d8b16e
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  XCDYouTubeKit: 5ad334d4657ab920adc5bd6c16f39db8c8ad8d24
 
-PODFILE CHECKSUM: f5afee6116764bd70969e91cc081fffcaf5c06c5
+PODFILE CHECKSUM: ae69182652f7359be9aa74ad94ffeefb0236a5ff
 
 COCOAPODS: 1.9.2

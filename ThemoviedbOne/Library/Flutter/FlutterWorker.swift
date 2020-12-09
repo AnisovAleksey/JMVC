@@ -21,7 +21,6 @@ final class FlutterWorker {
     init(router: Router) {
         self.router = router
         self.flutterEngine = FlutterEngine(name: "flutterApp", project: nil, allowHeadlessExecution: true)
-        
     }
     
     private func setupChannels() {
@@ -48,9 +47,15 @@ final class FlutterWorker {
         
         GeneratedPluginRegistrant.register(with: flutterEngine)
         
-        flutterEngine
-            .registrar(forPlugin: "platformVideoView")?
-            .register(FlutterMyVideoViewFactory(), withId: "FlutterMyVideoView")
+        
+        if (!flutterEngine.hasPlugin("platformVideoViews")) {
+            flutterEngine
+                .registrar(forPlugin: "platformVideoViews")
+                .map {
+                    $0.register(FlutterMyVideoViewFactory(), withId: "FlutterMyVideoView")
+                    $0.register(FlutterYoutubeVideoViewFactory(), withId: "FlutterYoutubeVideoView")
+                }
+        }
     }
 }
 

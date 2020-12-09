@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chess_board/flutter_chess_board.dart';
 import 'package:flutter_game/custom_channels.dart';
 import 'package:flutter_game/video_view.dart';
+import 'package:flutter_game/youtube_video_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -65,6 +66,13 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 100,
           ),
           LayoutBuilder(builder: _buildChessBoard),
+          SizedBox(
+            child: YoutubeVideoView(
+              videoId: "SmTCmDMi4BY",
+            ),
+            width: 252,
+            height: 142,
+          ),
           RawMaterialButton(onPressed: () => _startCam())
         ],
       ),

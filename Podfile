@@ -11,6 +11,7 @@ target 'ThemoviedbOne' do
   pod "Alamofire"
   pod "AlamofireImage"
   pod "SnapKit"
+  pod "XCDYouTubeKit"
 
 
   target 'ThemoviedbOneScreenshotTests' do
